@@ -1,13 +1,9 @@
 # TikTok Downloader
 
-## No login or password are required
+Simple python script to download videos and music from TikTok.
 
-### Purpose
-Well this script is useful for downloading content from TikTok by link.
- * Video,
- * Audio,
-
-### Requirements For TikTok Downloader
+### Requirements For TikTok Downloader:
  * requests
+ * aiohttp
 
 Telegram Bot to download videos from TikTok without watermark: [@ttsavebot](https://t.me/ttsavebot)

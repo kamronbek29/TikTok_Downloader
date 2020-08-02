@@ -7,8 +7,18 @@ import requests
 
 HEADERS = {
     "User-Agent": 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) '
-    'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'
+                  'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'
            }
+
+
+def main(link):
+    print('Getting direct link...')
+    download_url = get_url(link)
+
+    print('Downloading the file...')
+    file_dir = download_file(download_url)
+
+    print('File downloaded in {}'.format(file_dir))
 
 
 # Function to get direct url of the file
@@ -50,11 +60,6 @@ def download_file(url_to_download):
 
 if __name__ == '__main__':
     input_url = input('Paste TikTok video or music url here: ')
-    print('Getting direct link...')
-    download_url = get_url(input_url)
-    print('Downloading the file...')
-    file_dir = download_file(download_url)
-    print('File downloaded in {}'.format(file_dir))
-
+    main(input_url)
 
 
